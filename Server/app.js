@@ -20,11 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors())
-// Serve static files from the "public" directory
-app.use(express.static('public'));
-
 // Use routes from routes directory
-app.use('/api', routes);
+app.use('/', routes);
 
 // Apply the rate limiting middleware to all requests
 app.use(limiter);
