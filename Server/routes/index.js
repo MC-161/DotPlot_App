@@ -4,7 +4,7 @@ import scanRoutes from './scanRoutes.js'
 const router = Router();
 
 // Use patient routes
-router.use('/', patientRoutes)
-router.use('/', scanRoutes)
+router.use('/patients', patientRoutes)
+router.use('/scans', scanRoutes)
 
 export default router;

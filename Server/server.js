@@ -1,6 +1,8 @@
 import config from "./config.mjs"
 import express from 'express';
 import mongoose from 'mongoose';
+import Patient from "./models/Patient.js";
+import Scan from "./models/Scan.js";
 
 const createServer = () => {
   const app = express();

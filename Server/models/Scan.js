@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const scanSchema = new mongoose.Schema({
-  id: { type: Number, required: true, unique: true },
+  _id: { type: Number, required: true,},
   coordinates: { type: String, required: true },
   date: { type: Date, required: true },
   diagnosis: { type: String, required: true },

@@ -1,24 +1,26 @@
 import express from 'express';
-import Scan from '../models/Scan.js';
-import path from 'path';
+import upload from '../middleware/upload.js';
+import {
+  getScans,
+  getScanById,
+  createScan,
+  updateScan,
+  deleteScan,
+  uploadScan,
+  assignScanToPatient
+} from '../controllers/scanController.js';
 
 const router = express.Router();
 
+router.get('/', getScans); // Get all scans
+router.get('/:id', getScanById); // Get scan by ID
+router.post('/', createScan); // Create a new scan
+router.put('/:id', updateScan); // Update scan by ID
+router.delete('/:id', deleteScan); // Delete scan by ID
 
-
-// add Scan
-router.post('/', async (req, res) => {
-  try {
-      const newScan = new Scan({
-          ...req.body,
-          imagePath: `/images/${req.body.id}.png`  // Adjust this based on your image naming convention
-      });
-      await newScan.save();
-      res.status(201).json(newScan);
-  } catch (err) {
-      res.status(400).send(err.message);
-  }
-});
+// Route to upload scan
+router.post('/upload', upload.single('scanImage'), uploadScan);
+router.post('/assign', assignScanToPatient); // Ensure this route is included
 
 
 export default router;
