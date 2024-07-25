@@ -1,0 +1,482 @@
+{
+    "108": {
+        "US scan ID": 108,
+        "Coordinates": "B2",
+        "Scan Date": "05/01/2023",
+        "Diagnosis": "Benign"
+    },
+    "121": {
+        "US scan ID": 121,
+        "Coordinates": "C3",
+        "Scan Date": "18/01/2023",
+        "Diagnosis": "Benign"
+    },
+    "122": {
+        "US scan ID": 122,
+        "Coordinates": "G1",
+        "Scan Date": "07/09/2023",
+        "Diagnosis": "Malignant"
+    },
+    "124": {
+        "US scan ID": 124,
+        "Coordinates": "H3",
+        "Scan Date": "01/03/2024",
+        "Diagnosis": "Malignant"
+    },
+    "128": {
+        "US scan ID": 128,
+        "Coordinates": "F3",
+        "Scan Date": "13/09/2023",
+        "Diagnosis": "Benign"
+    },
+    "134": {
+        "US scan ID": 134,
+        "Coordinates": "D2",
+        "Scan Date": "29/01/2024",
+        "Diagnosis": "Malignant"
+    },
+    "150": {
+        "US scan ID": 150,
+        "Coordinates": "A3",
+        "Scan Date": "08/04/2024",
+        "Diagnosis": "Benign"
+    },
+    "177": {
+        "US scan ID": 177,
+        "Coordinates": "F2",
+        "Scan Date": "01/07/2024",
+        "Diagnosis": "Benign"
+    },
+    "187": {
+        "US scan ID": 187,
+        "Coordinates": "B4",
+        "Scan Date": "21/09/2023",
+        "Diagnosis": "Benign"
+    },
+    "189": {
+        "US scan ID": 189,
+        "Coordinates": "C1",
+        "Scan Date": "23/05/2023",
+        "Diagnosis": "Benign"
+    },
+    "194": {
+        "US scan ID": 194,
+        "Coordinates": "A2",
+        "Scan Date": "10/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "209": {
+        "US scan ID": 209,
+        "Coordinates": "F3",
+        "Scan Date": "12/10/2023",
+        "Diagnosis": "Benign"
+    },
+    "233": {
+        "US scan ID": 233,
+        "Coordinates": "H3",
+        "Scan Date": "03/07/2023",
+        "Diagnosis": "Benign"
+    },
+    "237": {
+        "US scan ID": 237,
+        "Coordinates": "B1",
+        "Scan Date": "13/06/2024",
+        "Diagnosis": "Benign"
+    },
+    "267": {
+        "US scan ID": 267,
+        "Coordinates": "F4",
+        "Scan Date": "07/06/2023",
+        "Diagnosis": "Benign"
+    },
+    "270": {
+        "US scan ID": 270,
+        "Coordinates": "B4",
+        "Scan Date": "20/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "299": {
+        "US scan ID": 299,
+        "Coordinates": "C2",
+        "Scan Date": "11/09/2023",
+        "Diagnosis": "Malignant"
+    },
+    "331": {
+        "US scan ID": 331,
+        "Coordinates": "C2",
+        "Scan Date": "25/01/2023",
+        "Diagnosis": "Benign"
+    },
+    "335": {
+        "US scan ID": 335,
+        "Coordinates": "C4",
+        "Scan Date": "21/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "341": {
+        "US scan ID": 341,
+        "Coordinates": "G4",
+        "Scan Date": "18/04/2023",
+        "Diagnosis": "Benign"
+    },
+    "343": {
+        "US scan ID": 343,
+        "Coordinates": "H2",
+        "Scan Date": "01/06/2023",
+        "Diagnosis": "Benign"
+    },
+    "352": {
+        "US scan ID": 352,
+        "Coordinates": "A3",
+        "Scan Date": "04/10/2023",
+        "Diagnosis": "Benign"
+    },
+    "391": {
+        "US scan ID": 391,
+        "Coordinates": "A2",
+        "Scan Date": "28/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "393": {
+        "US scan ID": 393,
+        "Coordinates": "D2",
+        "Scan Date": "15/01/2024",
+        "Diagnosis": "Malignant"
+    },
+    "395": {
+        "US scan ID": 395,
+        "Coordinates": "D3",
+        "Scan Date": "02/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "402": {
+        "US scan ID": 402,
+        "Coordinates": "H4",
+        "Scan Date": "29/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "409": {
+        "US scan ID": 409,
+        "Coordinates": "C2",
+        "Scan Date": "03/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "412": {
+        "US scan ID": 412,
+        "Coordinates": "A4",
+        "Scan Date": "06/06/2023",
+        "Diagnosis": "Benign"
+    },
+    "421": {
+        "US scan ID": 421,
+        "Coordinates": "H1",
+        "Scan Date": "13/07/2023",
+        "Diagnosis": "Benign"
+    },
+    "427": {
+        "US scan ID": 427,
+        "Coordinates": "F2",
+        "Scan Date": "31/08/2023",
+        "Diagnosis": "Benign"
+    },
+    "456": {
+        "US scan ID": 456,
+        "Coordinates": "F4",
+        "Scan Date": "30/04/2024",
+        "Diagnosis": "Malignant"
+    },
+    "464": {
+        "US scan ID": 464,
+        "Coordinates": "B4",
+        "Scan Date": "12/09/2023",
+        "Diagnosis": "Malignant"
+    },
+    "467": {
+        "US scan ID": 467,
+        "Coordinates": "D3",
+        "Scan Date": "10/06/2024",
+        "Diagnosis": "Malignant"
+    },
+    "468": {
+        "US scan ID": 468,
+        "Coordinates": "F2",
+        "Scan Date": "17/05/2023",
+        "Diagnosis": "Benign"
+    },
+    "483": {
+        "US scan ID": 483,
+        "Coordinates": "B1",
+        "Scan Date": "15/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "487": {
+        "US scan ID": 487,
+        "Coordinates": "H1",
+        "Scan Date": "06/02/2024",
+        "Diagnosis": "Benign"
+    },
+    "488": {
+        "US scan ID": 488,
+        "Coordinates": "C4",
+        "Scan Date": "26/04/2024",
+        "Diagnosis": "Benign"
+    },
+    "489": {
+        "US scan ID": 489,
+        "Coordinates": "G3",
+        "Scan Date": "06/09/2023",
+        "Diagnosis": "Benign"
+    },
+    "495": {
+        "US scan ID": 495,
+        "Coordinates": "H1",
+        "Scan Date": "01/05/2023",
+        "Diagnosis": "Benign"
+    },
+    "500": {
+        "US scan ID": 500,
+        "Coordinates": "C4",
+        "Scan Date": "08/01/2024",
+        "Diagnosis": "Benign"
+    },
+    "509": {
+        "US scan ID": 509,
+        "Coordinates": "B3",
+        "Scan Date": "01/08/2023",
+        "Diagnosis": "Malignant"
+    },
+    "512": {
+        "US scan ID": 512,
+        "Coordinates": "C3",
+        "Scan Date": "04/07/2023",
+        "Diagnosis": "Malignant"
+    },
+    "515": {
+        "US scan ID": 515,
+        "Coordinates": "H4",
+        "Scan Date": "11/08/2023",
+        "Diagnosis": "Malignant"
+    },
+    "577": {
+        "US scan ID": 577,
+        "Coordinates": "D2",
+        "Scan Date": "06/07/2023",
+        "Diagnosis": "Benign"
+    },
+    "597": {
+        "US scan ID": 597,
+        "Coordinates": "F4",
+        "Scan Date": "24/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "603": {
+        "US scan ID": 603,
+        "Coordinates": "G1",
+        "Scan Date": "28/12/2023",
+        "Diagnosis": "Benign"
+    },
+    "606": {
+        "US scan ID": 606,
+        "Coordinates": "C3",
+        "Scan Date": "13/10/2023",
+        "Diagnosis": "Malignant"
+    },
+    "625": {
+        "US scan ID": 625,
+        "Coordinates": "A2",
+        "Scan Date": "07/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "634": {
+        "US scan ID": 634,
+        "Coordinates": "B2",
+        "Scan Date": "09/06/2023",
+        "Diagnosis": "Benign"
+    },
+    "653": {
+        "US scan ID": 653,
+        "Coordinates": "C1",
+        "Scan Date": "26/12/2023",
+        "Diagnosis": "Benign"
+    },
+    "676": {
+        "US scan ID": 676,
+        "Coordinates": "D3",
+        "Scan Date": "17/08/2023",
+        "Diagnosis": "Malignant"
+    },
+    "686": {
+        "US scan ID": 686,
+        "Coordinates": "G3",
+        "Scan Date": "17/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "690": {
+        "US scan ID": 690,
+        "Coordinates": "E3",
+        "Scan Date": "22/12/2023",
+        "Diagnosis": "Malignant"
+    },
+    "708": {
+        "US scan ID": 708,
+        "Coordinates": "F2",
+        "Scan Date": "05/05/2023",
+        "Diagnosis": "Benign"
+    },
+    "709": {
+        "US scan ID": 709,
+        "Coordinates": "G1",
+        "Scan Date": "14/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "719": {
+        "US scan ID": 719,
+        "Coordinates": "H4",
+        "Scan Date": "25/04/2024",
+        "Diagnosis": "Benign"
+    },
+    "725": {
+        "US scan ID": 725,
+        "Coordinates": "G3",
+        "Scan Date": "18/03/2024",
+        "Diagnosis": "Benign"
+    },
+    "739": {
+        "US scan ID": 739,
+        "Coordinates": "D2",
+        "Scan Date": "26/05/2023",
+        "Diagnosis": "Benign"
+    },
+    "740": {
+        "US scan ID": 740,
+        "Coordinates": "B4",
+        "Scan Date": "27/07/2023",
+        "Diagnosis": "Benign"
+    },
+    "743": {
+        "US scan ID": 743,
+        "Coordinates": "H1",
+        "Scan Date": "19/01/2024",
+        "Diagnosis": "Malignant"
+    },
+    "746": {
+        "US scan ID": 746,
+        "Coordinates": "F2",
+        "Scan Date": "19/04/2023",
+        "Diagnosis": "Benign"
+    },
+    "749": {
+        "US scan ID": 749,
+        "Coordinates": "F3",
+        "Scan Date": "09/11/2023",
+        "Diagnosis": "Benign"
+    },
+    "764": {
+        "US scan ID": 764,
+        "Coordinates": "G3",
+        "Scan Date": "20/07/2023",
+        "Diagnosis": "Malignant"
+    },
+    "765": {
+        "US scan ID": 765,
+        "Coordinates": "H3",
+        "Scan Date": "15/09/2023",
+        "Diagnosis": "Benign"
+    },
+    "793": {
+        "US scan ID": 793,
+        "Coordinates": "A4",
+        "Scan Date": "02/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "794": {
+        "US scan ID": 794,
+        "Coordinates": "C3",
+        "Scan Date": "18/01/2024",
+        "Diagnosis": "Benign"
+    },
+    "807": {
+        "US scan ID": 807,
+        "Coordinates": "D2",
+        "Scan Date": "24/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "808": {
+        "US scan ID": 808,
+        "Coordinates": "G4",
+        "Scan Date": "14/06/2023",
+        "Diagnosis": "Benign"
+    },
+    "809": {
+        "US scan ID": 809,
+        "Coordinates": "H4",
+        "Scan Date": "13/04/2023",
+        "Diagnosis": "Benign"
+    },
+    "818": {
+        "US scan ID": 818,
+        "Coordinates": "A4",
+        "Scan Date": "16/04/2024",
+        "Diagnosis": "Malignant"
+    },
+    "823": {
+        "US scan ID": 823,
+        "Coordinates": "G1",
+        "Scan Date": "11/10/2023",
+        "Diagnosis": "Benign"
+    },
+    "832": {
+        "US scan ID": 832,
+        "Coordinates": "B1",
+        "Scan Date": "28/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "836": {
+        "US scan ID": 836,
+        "Coordinates": "D3",
+        "Scan Date": "16/06/2023",
+        "Diagnosis": "Malignant"
+    },
+    "854": {
+        "US scan ID": 854,
+        "Coordinates": "G4",
+        "Scan Date": "25/10/2023",
+        "Diagnosis": "Malignant"
+    },
+    "863": {
+        "US scan ID": 863,
+        "Coordinates": "H4",
+        "Scan Date": "31/01/2023",
+        "Diagnosis": "Benign"
+    },
+    "872": {
+        "US scan ID": 872,
+        "Coordinates": "C3",
+        "Scan Date": "15/03/2023",
+        "Diagnosis": "Benign"
+    },
+    "873": {
+        "US scan ID": 873,
+        "Coordinates": "B4",
+        "Scan Date": "06/02/2023",
+        "Diagnosis": "Benign"
+    },
+    "875": {
+        "US scan ID": 875,
+        "Coordinates": "A2",
+        "Scan Date": "03/08/2023",
+        "Diagnosis": "Benign"
+    },
+    "878": {
+        "US scan ID": 878,
+        "Coordinates": "G3",
+        "Scan Date": "06/12/2023",
+        "Diagnosis": "Benign"
+    },
+    "890": {
+        "US scan ID": 890,
+        "Coordinates": "H3",
+        "Scan Date": "11/06/2024",
+        "Diagnosis": "Malignant"
+    }
+}

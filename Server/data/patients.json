@@ -1,0 +1,581 @@
+{
+    "1107": {
+        "Patient ID": 1107,
+        "Patient Name": "Saima Ellis",
+        "Age": 26,
+        "Height (cm)": 177,
+        "Weight (kg)": 81,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            468
+        ]
+    },
+    "1301": {
+        "Patient ID": 1301,
+        "Patient Name": "Raja Prescott",
+        "Age": 35,
+        "Height (cm)": 162,
+        "Weight (kg)": 65,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            233
+        ]
+    },
+    "1309": {
+        "Patient ID": 1309,
+        "Patient Name": "Sue Maynard",
+        "Age": 38,
+        "Height (cm)": 183,
+        "Weight (kg)": 83,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            421
+        ]
+    },
+    "1348": {
+        "Patient ID": 1348,
+        "Patient Name": "Tammy Bowman",
+        "Age": 22,
+        "Height (cm)": 151,
+        "Weight (kg)": 88,
+        "History of breast cancer": "Yes",
+        "US scan IDs": [
+            489
+        ]
+    },
+    "1680": {
+        "Patient ID": 1680,
+        "Patient Name": "Flora Hancock",
+        "Age": 50,
+        "Height (cm)": 190,
+        "Weight (kg)": 85,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            108,
+            488
+        ]
+    },
+    "2008": {
+        "Patient ID": 2008,
+        "Patient Name": "Andrea Ogden",
+        "Age": 45,
+        "Height (cm)": 189,
+        "Weight (kg)": 87,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            765
+        ]
+    },
+    "2338": {
+        "Patient ID": 2338,
+        "Patient Name": "Kay Slade",
+        "Age": 20,
+        "Height (cm)": 180,
+        "Weight (kg)": 81,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            709
+        ]
+    },
+    "2588": {
+        "Patient ID": 2588,
+        "Patient Name": "Claudia Reilly",
+        "Age": 23,
+        "Height (cm)": 171,
+        "Weight (kg)": 58,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            808,
+            690
+        ]
+    },
+    "2709": {
+        "Patient ID": 2709,
+        "Patient Name": "Minnie Kenny",
+        "Age": 23,
+        "Height (cm)": 156,
+        "Weight (kg)": 91,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            121,
+            409,
+            331
+        ]
+    },
+    "2716": {
+        "Patient ID": 2716,
+        "Patient Name": "Frances Fawcett",
+        "Age": 44,
+        "Height (cm)": 169,
+        "Weight (kg)": 53,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            402,
+            625
+        ]
+    },
+    "2898": {
+        "Patient ID": 2898,
+        "Patient Name": "Thelma Fryer",
+        "Age": 22,
+        "Height (cm)": 182,
+        "Weight (kg)": 81,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            809,
+            495,
+            341
+        ]
+    },
+    "3000": {
+        "Patient ID": 3000,
+        "Patient Name": "Joanna Archer",
+        "Age": 52,
+        "Height (cm)": 188,
+        "Weight (kg)": 76,
+        "History of breast cancer": "Yes",
+        "US scan IDs": [
+            352
+        ]
+    },
+    "3023": {
+        "Patient ID": 3023,
+        "Patient Name": "Lyndsey Haworth",
+        "Age": 32,
+        "Height (cm)": 184,
+        "Weight (kg)": 86,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            740,
+            412,
+            739
+        ]
+    },
+    "3030": {
+        "Patient ID": 3030,
+        "Patient Name": "Madeline Sadler",
+        "Age": 56,
+        "Height (cm)": 186,
+        "Weight (kg)": 83,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            686
+        ]
+    },
+    "3132": {
+        "Patient ID": 3132,
+        "Patient Name": "Norma Rogers",
+        "Age": 53,
+        "Height (cm)": 154,
+        "Weight (kg)": 83,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            177
+        ]
+    },
+    "3274": {
+        "Patient ID": 3274,
+        "Patient Name": "Sandy Fry",
+        "Age": 29,
+        "Height (cm)": 167,
+        "Weight (kg)": 75,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            128
+        ]
+    },
+    "3377": {
+        "Patient ID": 3377,
+        "Patient Name": "Sandra Whiting",
+        "Age": 58,
+        "Height (cm)": 178,
+        "Weight (kg)": 97,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            725
+        ]
+    },
+    "3992": {
+        "Patient ID": 3992,
+        "Patient Name": "Julie Sinclair",
+        "Age": 23,
+        "Height (cm)": 179,
+        "Weight (kg)": 61,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            653,
+            515,
+            509
+        ]
+    },
+    "4131": {
+        "Patient ID": 4131,
+        "Patient Name": "Mariam Leech",
+        "Age": 39,
+        "Height (cm)": 181,
+        "Weight (kg)": 52,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            603,
+            890
+        ]
+    },
+    "4186": {
+        "Patient ID": 4186,
+        "Patient Name": "Rosie Croft",
+        "Age": 29,
+        "Height (cm)": 184,
+        "Weight (kg)": 78,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            872
+        ]
+    },
+    "4262": {
+        "Patient ID": 4262,
+        "Patient Name": "Sally Carey",
+        "Age": 24,
+        "Height (cm)": 176,
+        "Weight (kg)": 67,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            237
+        ]
+    },
+    "4445": {
+        "Patient ID": 4445,
+        "Patient Name": "Katy Oxley",
+        "Age": 56,
+        "Height (cm)": 187,
+        "Weight (kg)": 51,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            749,
+            836
+        ]
+    },
+    "4511": {
+        "Patient ID": 4511,
+        "Patient Name": "Juliette Chambers",
+        "Age": 44,
+        "Height (cm)": 175,
+        "Weight (kg)": 66,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            794
+        ]
+    },
+    "4734": {
+        "Patient ID": 4734,
+        "Patient Name": "Juliet Williams",
+        "Age": 53,
+        "Height (cm)": 163,
+        "Weight (kg)": 94,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            878
+        ]
+    },
+    "4926": {
+        "Patient ID": 4926,
+        "Patient Name": "Catriona Howes",
+        "Age": 52,
+        "Height (cm)": 188,
+        "Weight (kg)": 98,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            863,
+            464,
+            299
+        ]
+    },
+    "5354": {
+        "Patient ID": 5354,
+        "Patient Name": "Mandeep Farrar",
+        "Age": 33,
+        "Height (cm)": 172,
+        "Weight (kg)": 56,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            832
+        ]
+    },
+    "5391": {
+        "Patient ID": 5391,
+        "Patient Name": "Susan Townsend",
+        "Age": 37,
+        "Height (cm)": 178,
+        "Weight (kg)": 77,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            875,
+            393
+        ]
+    },
+    "5539": {
+        "Patient ID": 5539,
+        "Patient Name": "Harriet Rodgers",
+        "Age": 18,
+        "Height (cm)": 172,
+        "Weight (kg)": 91,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            746
+        ]
+    },
+    "5559": {
+        "Patient ID": 5559,
+        "Patient Name": "Kaye Swift",
+        "Age": 28,
+        "Height (cm)": 184,
+        "Weight (kg)": 93,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            634
+        ]
+    },
+    "5590": {
+        "Patient ID": 5590,
+        "Patient Name": "Teresa Dean",
+        "Age": 51,
+        "Height (cm)": 190,
+        "Weight (kg)": 50,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            270
+        ]
+    },
+    "5724": {
+        "Patient ID": 5724,
+        "Patient Name": "Jayne Pickering",
+        "Age": 35,
+        "Height (cm)": 189,
+        "Weight (kg)": 76,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            209
+        ]
+    },
+    "5764": {
+        "Patient ID": 5764,
+        "Patient Name": "Serena Herbert",
+        "Age": 55,
+        "Height (cm)": 159,
+        "Weight (kg)": 91,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            807,
+            854,
+            606
+        ]
+    },
+    "5794": {
+        "Patient ID": 5794,
+        "Patient Name": "Sara Higgs",
+        "Age": 56,
+        "Height (cm)": 178,
+        "Weight (kg)": 68,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            194,
+            818
+        ]
+    },
+    "5934": {
+        "Patient ID": 5934,
+        "Patient Name": "Kylie Millar",
+        "Age": 43,
+        "Height (cm)": 180,
+        "Weight (kg)": 86,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            267
+        ]
+    },
+    "6022": {
+        "Patient ID": 6022,
+        "Patient Name": "Alison Boyd",
+        "Age": 52,
+        "Height (cm)": 176,
+        "Weight (kg)": 73,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            597
+        ]
+    },
+    "6318": {
+        "Patient ID": 6318,
+        "Patient Name": "Alice Bradley",
+        "Age": 58,
+        "Height (cm)": 182,
+        "Weight (kg)": 100,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            335,
+            395,
+            873
+        ]
+    },
+    "6984": {
+        "Patient ID": 6984,
+        "Patient Name": "Margaret Hollis",
+        "Age": 24,
+        "Height (cm)": 169,
+        "Weight (kg)": 75,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            343
+        ]
+    },
+    "6998": {
+        "Patient ID": 6998,
+        "Patient Name": "Heather Bell",
+        "Age": 60,
+        "Height (cm)": 160,
+        "Weight (kg)": 91,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            793
+        ]
+    },
+    "7007": {
+        "Patient ID": 7007,
+        "Patient Name": "Jade Bradshaw",
+        "Age": 30,
+        "Height (cm)": 168,
+        "Weight (kg)": 93,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            487
+        ]
+    },
+    "7174": {
+        "Patient ID": 7174,
+        "Patient Name": "Hayley Chappell",
+        "Age": 57,
+        "Height (cm)": 152,
+        "Weight (kg)": 61,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            500,
+            676
+        ]
+    },
+    "7478": {
+        "Patient ID": 7478,
+        "Patient Name": "Annette Hull",
+        "Age": 19,
+        "Height (cm)": 170,
+        "Weight (kg)": 85,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            577,
+            189
+        ]
+    },
+    "7854": {
+        "Patient ID": 7854,
+        "Patient Name": "Catherine Barlow",
+        "Age": 48,
+        "Height (cm)": 171,
+        "Weight (kg)": 56,
+        "History of breast cancer": "Yes",
+        "US scan IDs": [
+            708
+        ]
+    },
+    "7895": {
+        "Patient ID": 7895,
+        "Patient Name": "Lynn Hibbert",
+        "Age": 54,
+        "Height (cm)": 163,
+        "Weight (kg)": 72,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            823,
+            456
+        ]
+    },
+    "8023": {
+        "Patient ID": 8023,
+        "Patient Name": "Elsie Short",
+        "Age": 60,
+        "Height (cm)": 159,
+        "Weight (kg)": 85,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            483
+        ]
+    },
+    "8225": {
+        "Patient ID": 8225,
+        "Patient Name": "Jennifer Hope",
+        "Age": 34,
+        "Height (cm)": 179,
+        "Weight (kg)": 67,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            187,
+            134
+        ]
+    },
+    "8290": {
+        "Patient ID": 8290,
+        "Patient Name": "Philomena Joyce",
+        "Age": 24,
+        "Height (cm)": 162,
+        "Weight (kg)": 61,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            427,
+            124
+        ]
+    },
+    "8313": {
+        "Patient ID": 8313,
+        "Patient Name": "Maggie Ray",
+        "Age": 55,
+        "Height (cm)": 188,
+        "Weight (kg)": 60,
+        "History of breast cancer": "Yes",
+        "US scan IDs": [
+            719
+        ]
+    },
+    "8326": {
+        "Patient ID": 8326,
+        "Patient Name": "Veronica Frost",
+        "Age": 53,
+        "Height (cm)": 180,
+        "Weight (kg)": 97,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            391,
+            764,
+            512
+        ]
+    },
+    "8556": {
+        "Patient ID": 8556,
+        "Patient Name": "Clara Gray",
+        "Age": 27,
+        "Height (cm)": 167,
+        "Weight (kg)": 55,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            743,
+            122
+        ]
+    },
+    "8778": {
+        "Patient ID": 8778,
+        "Patient Name": "Elisabeth Slade",
+        "Age": 21,
+        "Height (cm)": 183,
+        "Weight (kg)": 54,
+        "History of breast cancer": "No",
+        "US scan IDs": [
+            150
+        ]
+    }
+}

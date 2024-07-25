@@ -7,7 +7,7 @@ const patientSchema = new mongoose.Schema({
     height: { type: Number, required: true },
     weight: { type: Number, required: true },
     history: { type: String, required: true },
-    scans: [{ type: Number }] // Change from ObjectId to Number
+    scans: [{ type: Number, ref: 'Scan' }]
 });
 
 const Patient = mongoose.model('Patient', patientSchema);
