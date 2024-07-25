@@ -1,6 +1,7 @@
 import { Avatar } from "@mui/material";
 import doctorImg from "@/assets/doctor.webp"
 import StatCard from "@/components/StatCard";
+import RecentPatient from "@/components/RecentPatient";
 
 const Home = () => {
   return (
@@ -16,7 +17,9 @@ const Home = () => {
         <StatCard title="Total Patient" stat={10}/>
         <StatCard title="Total Scans" stat={50}/>
       </div>
-
+      <div className="mt-10">
+        <RecentPatient></RecentPatient>
+      </div>
 
     </div>
   );
