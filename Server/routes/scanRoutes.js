@@ -8,7 +8,8 @@ import {
   deleteScan,
   uploadScan,
   assignScanToPatient,
-  getScanCount
+  getScanCount,
+  getLimitedScans
 } from '../controllers/scanController.js';
 
 const router = express.Router();

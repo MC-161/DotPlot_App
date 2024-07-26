@@ -5,7 +5,8 @@ import {
   createPatient,
   updatePatient,
   deletePatient,
-  getPatientCount
+  getPatientCount,
+  getLimitedPatients
 } from '../controllers/patientController.js';
 
 const router = express.Router();
