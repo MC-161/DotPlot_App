@@ -12,11 +12,18 @@ const useScanCount = (): UseScanCountResult => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const Base = BaseUrl;
+  const token = localStorage.getItem('token');  
 
   useEffect(() => {
     const fetchScanCount = async () => {
       try {
-        const response = await fetch(`${Base}/scans/count`);
+        const response = await fetch(`${Base}/scans/count`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

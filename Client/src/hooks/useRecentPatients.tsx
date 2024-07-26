@@ -14,11 +14,18 @@ const useRecentPatients = (): UseRecentPatientsResult => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const Base = BaseUrl
+  const token = localStorage.getItem('token');  
 
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch(`${Base}/patients`); // Fetch recent patients
+        const response = await fetch(`${Base}/patients`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        }); // Fetch recent patients
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

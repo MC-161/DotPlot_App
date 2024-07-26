@@ -12,11 +12,18 @@ const usePatientCount = (): UsePatientCountResult => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const Base = BaseUrl;
-
+  // Retrieve the token from localStorage
+  const token = localStorage.getItem('token');  
   useEffect(() => {
     const fetchPatientCount = async () => {
       try {
-        const response = await fetch(`${Base}/patients/count`);
+        const response = await fetch(`${BaseUrl}/patients/count`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
