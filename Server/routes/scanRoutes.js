@@ -11,21 +11,24 @@ import {
   getScanCount,
   getLimitedScans
 } from '../controllers/scanController.js';
+import { verifyToken } from '../middleware/auth.js';
 
 const router = express.Router();
 
 
-router.get('/limited', getLimitedScans);
-router.get('/count', getScanCount);
-router.get('/', getScans); // Get all scans
-router.get('/:id', getScanById); // Get scan by ID
-router.post('/', createScan); // Create a new scan
-router.put('/:id', updateScan); // Update scan by ID
-router.delete('/:id', deleteScan); // Delete scan by ID
+// Protected Routes
+router.get('/limited', verifyToken, getLimitedScans);
+router.get('/count', verifyToken, getScanCount);
+router.get('/', verifyToken, getScans); // Get all scans
+router.get('/:id', verifyToken, getScanById); // Get scan by ID
+router.post('/', verifyToken, createScan); // Create a new scan
+router.put('/:id', verifyToken, updateScan); // Update scan by ID
+router.delete('/:id', verifyToken, deleteScan); // Delete scan by ID
 
 // Route to upload scan
-router.post('/upload', upload.single('scanImage'), uploadScan);
-router.post('/assign', assignScanToPatient); // Ensure this route is included
+router.post('/upload', verifyToken, upload.single('scanImage'), uploadScan);
+router.post('/assign', verifyToken, assignScanToPatient); // Ensure this route is included
+
 
 
 export default router;
