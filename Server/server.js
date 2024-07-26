@@ -1,6 +1,7 @@
 import config from "./config.mjs"
 import express from 'express';
 import mongoose from 'mongoose';
+import swaggerDocs from './swagger.js';
 // import Patient from "./models/Patient.js";
 // import Scan from "./models/Scan.js";
 // import fs from 'fs';
@@ -16,6 +17,7 @@ const createServer = () => {
       console.log("Connected to MongoDB");
       // await insertDummyPatient(); // Call the function here
       app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT}`));
+      swaggerDocs(app, PORT)
     })
     .catch((error) => console.log(`${error} did not connect`));
     return app
