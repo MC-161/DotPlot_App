@@ -4,11 +4,14 @@ import {
   getPatientById,
   createPatient,
   updatePatient,
-  deletePatient
+  deletePatient,
+  getPatientCount
 } from '../controllers/patientController.js';
 
 const router = express.Router();
 
+router.get('/limited', getLimitedPatients);
+router.get('/count', getPatientCount);
 router.get('/', getPatients); // Get all patients
 router.get('/:id', getPatientById); // Get patient by ID
 router.post('/', createPatient); // Create a new patient

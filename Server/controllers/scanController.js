@@ -13,6 +13,17 @@ export const getScans = async (req, res) => {
   }
 };
 
+export const getLimitedScans = async (req, res) => {
+  const limit = parseInt(req.query.limit, 10) || 10; // Default limit to 10 if not specified
+  try {
+    const scans = await Scan.find().limit(limit);
+    res.status(200).json(scans);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
 // Get a scan by ID
 export const getScanById = async (req, res) => {
   try {
@@ -117,5 +128,14 @@ export const assignScanToPatient = async (req, res) => {
     res.status(200).send('Scan assigned to patient successfully.');
   } catch (error) {
     res.status(500).send(error.message);
+  }
+};
+
+export const getScanCount = async (req, res) => {
+  try {
+    const scanCount = await Scan.countDocuments();
+    res.json(scanCount);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 };

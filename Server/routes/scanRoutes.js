@@ -7,11 +7,15 @@ import {
   updateScan,
   deleteScan,
   uploadScan,
-  assignScanToPatient
+  assignScanToPatient,
+  getScanCount
 } from '../controllers/scanController.js';
 
 const router = express.Router();
 
+
+router.get('/limited', getLimitedScans);
+router.get('/count', getScanCount);
 router.get('/', getScans); // Get all scans
 router.get('/:id', getScanById); // Get scan by ID
 router.post('/', createScan); // Create a new scan

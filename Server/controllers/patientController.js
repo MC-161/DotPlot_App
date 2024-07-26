@@ -10,6 +10,16 @@ export const getPatients = async (req, res) => {
   }
 };
 
+export const getLimitedPatients = async (req, res) => {
+  const limit = parseInt(req.query.limit, 10) || 10; // Default limit to 10 if not specified
+  try {
+    const patients = await Patient.find().limit(limit);
+    res.status(200).json(patients);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 // Get a patient by ID
 export const getPatientById = async (req, res) => {
   try {
@@ -60,5 +70,14 @@ export const deletePatient = async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
+  }
+};
+
+export const getPatientCount = async (req, res) => {
+  try {
+    const patientCount = await Patient.countDocuments();
+    res.json(patientCount);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 };
