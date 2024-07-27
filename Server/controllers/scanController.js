@@ -15,7 +15,7 @@ export const getScans = async (req, res) => {
 
 export const checkScanId = async (req, res) => {
   try {
-    const scan = await Scan.findById(req.params.scanId);
+    const scan = await Scan.findById(req.params.id);
     res.json({ isUnique: !scan });
   } catch (error) {
     res.status(500).send(error.message);
