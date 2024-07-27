@@ -34,8 +34,6 @@ export const getPatientById = async (req, res) => {
   }
 };
 
-// controllers/patientController.js
-
 export const createPatient = async (req, res) => {
   const { _id, name, age, height, weight, history } = req.body;
 
