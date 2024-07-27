@@ -10,6 +10,8 @@ import PatientDashPage from "@/pages/Patient/PatientDashPage";
 import PatientSearch from "@/pages/Patient/PatientSearch";
 import Login from "@/pages/Login/LoginForm";
 import { AuthProvider } from "./components/AuthContext";
+import EditPatient from "./pages/Patient/PatientEditPage";
+import Scans from "@/pages/Scan/ScanPage";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -25,6 +27,8 @@ const AppContent: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/patientSearch" element={<PatientSearch />} />
             <Route path="/patient/:id" element={<PatientDashPage />} />
+            <Route path="/patient/edit/:id" element={<EditPatient/>} />
+            <Route path="/scans" element={<Scans/>} />
             {/* Add more protected routes as needed */}
           </Routes>
         </main>
