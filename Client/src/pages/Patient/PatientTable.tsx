@@ -2,14 +2,6 @@
 import React, { useState } from 'react';
 import { usePatients } from '@/hooks/usePatients';
 
-interface Patient {
-  _id: number;
-  name: string;
-  age: number;
-  height: number;
-  weight: number;
-  history: string;
-}
 
 const PatientTable: React.FC = () => {
   const { patients, loading, error } = usePatients();
@@ -25,7 +17,7 @@ const PatientTable: React.FC = () => {
     setSortColumn(column);
   };
 
-  const handlePageChange = (event: React.MouseEvent<HTMLButtonElement>, newPage: number) => {
+  const handlePageChange = (_event: React.MouseEvent<HTMLButtonElement>, newPage: number) => {
     setPage(newPage + 1);
   };
 
