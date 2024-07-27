@@ -29,6 +29,7 @@ const PatientSearch = () => {
           </button>
         </div>
       </nav>
+      <div className='text-xl w-full flex justify-center font-semibold'>Patient Search</div>
       <PatientTable></PatientTable>
     </div>
   );

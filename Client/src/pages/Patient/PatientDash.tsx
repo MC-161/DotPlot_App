@@ -81,7 +81,6 @@ const PatientDash: React.FC = () => {
   if (!patient) {
     return <div>No patient data found</div>;
   }
-
   return (
     <div className="container mx-auto p-4">
       <div className="bg-white border-2 border-neutral-300 shadow-md rounded-lg p-6 mb-4">

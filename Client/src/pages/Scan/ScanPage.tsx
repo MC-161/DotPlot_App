@@ -6,7 +6,7 @@ type ScanForm = {
   scanId: string;
   coordinates: string;
   date: string;
-  diagnosis: string;
+  diagnosis: 'Benign' | 'Malignant'| 'default';
   imagePath: File | null;
   patientId: string;
 };
@@ -23,7 +23,7 @@ const Scans: React.FC = () => {
     scanId: '',
     coordinates: '',
     date: '',
-    diagnosis: '',
+    diagnosis: 'default', // Default value
     imagePath: null,
     patientId: '',
   });
@@ -121,7 +121,7 @@ const Scans: React.FC = () => {
         scanId: '',
         coordinates: '',
         date: '',
-        diagnosis: '',
+        diagnosis: 'default', // Default value
         imagePath: null,
         patientId: '',
       });
@@ -179,14 +179,18 @@ const Scans: React.FC = () => {
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2" htmlFor="diagnosis">Diagnosis</label>
-            <textarea
+            <select
               id="diagnosis"
               name="diagnosis"
               value={formData.diagnosis}
               onChange={handleChange}
               className="p-2 border rounded-md w-full"
               required
-            />
+            >
+              <option value="default">Select a diagnosis</option>
+              <option value="Benign">Benign</option>
+              <option value="Malignant">Malignant</option>
+            </select>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-2" htmlFor="imagePath">Scan Image</label>

@@ -19,7 +19,7 @@ const AppContent: React.FC = () => {
 
   return (
     <AuthProvider>
-      <div className="flex h-screen">
+      <div className="flex h-screen ">
         {!isLoginPage && <SideNav />}
         <main className={`flex-1 p-6`}>
           <Routes>
