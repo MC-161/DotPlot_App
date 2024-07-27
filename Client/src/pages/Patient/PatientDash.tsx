@@ -81,6 +81,13 @@ const PatientDash: React.FC = () => {
   if (!patient) {
     return <div>No patient data found</div>;
   }
+
+  const handleClick = (imagePath: string) => {
+    const filename = imagePath.split('/').pop(); // Extract filename
+    const imageUrl = `${BaseUrl}/images/${filename}`; // Construct URL for image
+    window.open(imageUrl, '_blank'); // Open image in a new tab
+  };
+
   return (
     <div className="container mx-auto p-4">
       <div className="bg-white border-2 border-neutral-300 shadow-md rounded-lg p-6 mb-4">
@@ -94,8 +101,8 @@ const PatientDash: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white shadow-xl rounded-lg p-6 mb-4 ">
-        <h2 className="text-xl font-semibold mb-4">Visualization and Scan Details</h2>
+      <div className="bg-white shadow-xl rounded-lg p-6 mb-4">
+        <h2 className="text-xl font-semibold mb-4">Visualization</h2>
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Visualization */}
           <div className="lg:w-1/3 h-full flex justify-center items-center">
@@ -104,11 +111,15 @@ const PatientDash: React.FC = () => {
             </div>
           </div>
 
-          {/* Scans Details */}
+          {/* Scan Details */}
           <div className="lg:w-2/3 h-72 overflow-y-scroll">
             <div className="grid grid-cols-3 gap-2">
               {scans.map(scan => (
-                <div key={scan._id} className="bg-white shadow-md rounded-lg p-4 border mb-4">
+                <div
+                  key={scan._id}
+                  className="bg-white shadow-md rounded-lg p-4 border mb-4 cursor-pointer"
+                  onClick={() => handleClick(scan.imagePath)}
+                >
                   <p><strong>Date:</strong> {new Date(scan.date).toLocaleDateString()}</p>
                   <p><strong>Diagnosis:</strong> {scan.diagnosis}</p>
                   <p><strong>Coordinates:</strong> {scan.coordinates}</p>
@@ -116,25 +127,6 @@ const PatientDash: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
-      </div>
-      <h2 className="text-xl font-semibold mb-4">Scan Images</h2>
-      <div className="bg-white shadow-xl rounded-lg p-6 h-[600px] overflow-y-scroll">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {scans.map(scan => (
-            <div key={scan._id} className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img
-                src={scan.imagePath}
-                alt={`Scan ${scan._id}`}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <p><strong>Date:</strong> {new Date(scan.date).toLocaleDateString()}</p>
-                <p><strong>Diagnosis:</strong> {scan.diagnosis}</p>
-                <p><strong>Coordinates:</strong> {scan.coordinates}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
