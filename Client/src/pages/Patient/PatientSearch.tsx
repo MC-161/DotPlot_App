@@ -1,12 +1,11 @@
-
 import { Avatar } from '@mui/material';
 import doctorImg from '@/assets/doctor.webp';
 import { useAuth } from '@/components/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import PatientTable from './PatientTable';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const PatientSearch = () => {
-
   const { logout } = useAuth();
   const navigate = useNavigate();
 
@@ -16,9 +15,18 @@ const PatientSearch = () => {
   };
 
   return (
-    <div className="h-screen">
-      <nav className="w-full flex items-end justify-between p-4 text-white">
-        <div className="ml-auto flex items-center space-x-4">
+    <div className="h-screen flex flex-col">
+      <nav className="w-full flex items-center justify-between p-4 text-white">
+        {/* Breadcrumbs Section */}
+        <div className="flex-grow">
+          <Breadcrumbs
+            breadcrumbs={[
+              { name: 'Patient Search', path: '#' }
+            ]}
+          />
+        </div>
+        {/* Doctor Info and Logout Button */}
+        <div className="flex items-center space-x-4">
           <Avatar className="border-2 border-purple-800" sx={{ width: 36, height: 36 }} src={doctorImg} />
           <p className='text-black'>Doctor</p>
           <button
@@ -29,8 +37,10 @@ const PatientSearch = () => {
           </button>
         </div>
       </nav>
-      <div className='text-xl w-full flex justify-center font-semibold'>Patient Search</div>
-      <PatientTable></PatientTable>
+      <div className="p-4 flex-grow">
+        <div className='text-xl font-semibold mb-4'>Patient Search</div>
+        <PatientTable />
+      </div>
     </div>
   );
 };
