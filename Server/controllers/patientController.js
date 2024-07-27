@@ -34,9 +34,24 @@ export const getPatientById = async (req, res) => {
   }
 };
 
-// Create a new patient
+// controllers/patientController.js
+
 export const createPatient = async (req, res) => {
-  const patient = new Patient(req.body);
+  const { _id, name, age, height, weight, history } = req.body;
+
+  if (!_id || !name || !age || !height || !weight) {
+    return res.status(400).json({ message: 'All fields are required.' });
+  }
+
+  const patient = new Patient({
+    _id,
+    name,
+    age,
+    height,
+    weight,
+    history,
+  });
+
   try {
     const newPatient = await patient.save();
     res.status(201).json(newPatient);
@@ -44,6 +59,7 @@ export const createPatient = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+
 
 // Update a patient by ID
 export const updatePatient = async (req, res) => {
