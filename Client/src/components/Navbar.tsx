@@ -12,8 +12,8 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { name: "Overview", path: "/", icon: <Home /> },
-  { name: "Patients", path: "/about", icon: <Person /> },
-  { name: "Scans", path: "/contact", icon: <ContactMail /> },
+  { name: "Patients", path: "/patientSearch", icon: <Person /> },
+  { name: "Scans", path: "/scans", icon: <ContactMail /> },
   { name: "Settings", path: "/settings", icon: <Settings /> },
 ];
 

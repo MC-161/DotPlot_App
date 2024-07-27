@@ -2,10 +2,10 @@ import React, { createContext, useState, useEffect, ReactNode, useContext } from
 import { useNavigate } from 'react-router-dom';
 
 // Define the shape of the context
+
 interface AuthContextType {
-  user: any; // Adjust type as needed
   token: string | null;
-  login: (token: string, user: any) => void;
+  login: (token: string) => void;
   logout: () => void;
 }
 
@@ -17,7 +17,6 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<any>(null); // Adjust type as needed
   const [token, setToken] = useState<string | null>(null);
   const navigate = useNavigate();
 
@@ -26,17 +25,16 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const savedToken = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
     
-    if (savedToken && savedUser) {
+    if (savedToken && savedUser) {      
+      // Optionally, add token validation here
+      // For example, you might check the token's expiration date
       setToken(savedToken);
-      setUser(JSON.parse(savedUser));
     }
   }, []);
 
-  const login = (token: string, user: any) => {
+  const login = (token: string,) => {
     localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(user));
     setToken(token);
-    setUser(user);
     navigate('/'); // Redirect to home page on successful login
   };
 
@@ -44,12 +42,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setToken(null);
-    setUser(null);
     navigate('/login'); // Redirect to login page on logout
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider value={{token, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -7,6 +7,7 @@ import {
 import Home from "@/pages/Home/Home";
 import SideNav from "@/components/Navbar";
 import PatientDash from "@/pages/Patient/PatientDash";
+import PatientSearch from "@/pages/Patient/PatientSearch";
 import Login from "@/pages/Login/LoginForm";
 import { AuthProvider } from "./components/AuthContext";
 
@@ -22,7 +23,8 @@ const AppContent: React.FC = () => {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
-            <Route path="/patientSearch" element={<PatientDash />} />
+            <Route path="/patientSearch" element={<PatientSearch />} />
+            <Route path="/patient/:id" element={<Home />} />
             {/* Add more protected routes as needed */}
           </Routes>
         </main>
