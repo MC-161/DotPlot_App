@@ -9,7 +9,8 @@ import {
   uploadScan,
   assignScanToPatient,
   getScanCount,
-  getLimitedScans
+  getLimitedScans,
+  checkScanId
 } from '../controllers/scanController.js';
 import { verifyToken } from '../middleware/auth.js';
 
@@ -18,6 +19,7 @@ const router = express.Router();
 
 // Protected Routes
 router.get('/limited', verifyToken, getLimitedScans);
+router.get('/checkScanId/:id', verifyToken, checkScanId);
 router.get('/count', verifyToken, getScanCount);
 router.get('/', verifyToken, getScans); // Get all scans
 router.get('/:id', verifyToken, getScanById); // Get scan by ID

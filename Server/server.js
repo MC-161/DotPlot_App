@@ -2,9 +2,9 @@ import config from "./config.mjs"
 import express from 'express';
 import mongoose from 'mongoose';
 import swaggerDocs from './swagger.js';
-// import Patient from "./models/Patient.js";
-// import Scan from "./models/Scan.js";
-// import fs from 'fs';
+import Patient from "./models/Patient.js";
+import Scan from "./models/Scan.js";
+import fs from 'fs';
 
 
 const createServer = () => {
@@ -43,7 +43,7 @@ const createServer = () => {
 //         coordinates: scanData['Coordinates'],
 //         date: parseDate(scanData['Scan Date']), // Convert the date string
 //         diagnosis: scanData['Diagnosis'],
-//         imagePath: `data/images/${scanData['US scan ID']}.jpg` // Adjust path as needed
+//         imagePath: `data/images/${scanData['US scan ID']}.png` // Adjust path as needed
 //       });
 //       return scan.save();
 //     }));

@@ -13,6 +13,15 @@ export const getScans = async (req, res) => {
   }
 };
 
+export const checkScanId = async (req, res) => {
+  try {
+    const scan = await Scan.findById(req.params.id);
+    res.json({ isUnique: !scan });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
 export const getLimitedScans = async (req, res) => {
   const limit = parseInt(req.query.limit, 10) || 10; // Default limit to 10 if not specified
   try {
