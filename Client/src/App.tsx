@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Home from "@/pages/Home/Home";
+import SideNav from "@/components/Navbar";
+import PatientDashPage from "@/pages/Patient/PatientDashPage";
+import PatientSearch from "@/pages/Patient/PatientSearch";
+import Login from "@/pages/Login/LoginForm";
+import { AuthProvider } from "./components/AuthContext";
+import EditPatient from "./pages/Patient/PatientEditPage";
+import Scans from "@/pages/Scan/ScanPage";
+import AddPatient from "./pages/Patient/AddPatient";
 
-function App() {
-  const [count, setCount] = useState(0)
+const AppContent: React.FC = () => {
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/";
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AuthProvider>
+      <div className="flex h-screen">
+        {!isLoginPage && <SideNav />}
+        <main className={`flex-1 ${!isLoginPage ? 'p-6' : ''}`}>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/dash" element={<Home />} />
+            <Route path="/patientSearch" element={<PatientSearch />} />
+            <Route path="/patient/:id" element={<PatientDashPage />} />
+            <Route path="/patient/edit/:id" element={<EditPatient />} />
+            <Route path="/scans" element={<Scans />} />
+            <Route path="/patient/add" element={<AddPatient />} />
+            {/* Add more protected routes as needed */}
+          </Routes>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </AuthProvider>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
 }
 
-export default App
+export default App;
