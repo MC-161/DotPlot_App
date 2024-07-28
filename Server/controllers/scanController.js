@@ -148,3 +148,19 @@ export const getScanCount = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
+// Generate unique scan ID
+export const generateUniqueScanId = async (req, res) => {
+  let isUnique = false;
+  let newScanId = '';
+
+  while (!isUnique) {
+    newScanId = Math.floor(Math.random() * 1000000).toString();
+    const scan = await Scan.findById(newScanId);
+    if (!scan) {
+      isUnique = true;
+    }
+  }
+
+  res.json({ scanId: newScanId });
+};

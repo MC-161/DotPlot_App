@@ -6,7 +6,7 @@ type ScanForm = {
   scanId: string;
   coordinates: string;
   date: string;
-  diagnosis: 'Benign' | 'Malignant'| 'default';
+  diagnosis: 'Benign' | 'Malignant' | 'default';
   imagePath: File | null;
   patientId: string;
 };
@@ -23,7 +23,7 @@ const Scans: React.FC = () => {
     scanId: '',
     coordinates: '',
     date: '',
-    diagnosis: 'default', // Default value
+    diagnosis: 'default',
     imagePath: null,
     patientId: '',
   });
@@ -34,31 +34,22 @@ const Scans: React.FC = () => {
   const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
-    generateUniqueScanId();
+    fetchUniqueScanId();
     fetchPatients();
   }, []);
 
-  const generateUniqueScanId = async () => {
-    let isUnique = false;
-    let newScanId = '';
-
-    while (!isUnique) {
-      newScanId = Math.floor(Math.random() * 1000000).toString(); // Generate a random scan ID
-
-      try {
-        const response = await axios.get(`${BaseUrl}/scans/checkScanId/${newScanId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        isUnique = response.data.isUnique;
-      } catch (err) {
-        console.error('Error checking scan ID uniqueness', err);
-      }
+  const fetchUniqueScanId = async () => {
+    try {
+      const response = await axios.get(`${BaseUrl}/scans/generateUniqueScanId`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setFormData(prev => ({ ...prev, scanId: response.data.scanId }));
+    } catch (err) {
+      console.error('Error generating unique scan ID', err);
+      setError('Error generating unique scan ID.');
     }
-
-    setFormData(prev => ({ ...prev, scanId: newScanId }));
   };
 
   const fetchPatients = async () => {
@@ -121,12 +112,13 @@ const Scans: React.FC = () => {
         scanId: '',
         coordinates: '',
         date: '',
-        diagnosis: 'default', // Default value
+        diagnosis: 'default',
         imagePath: null,
         patientId: '',
       });
-      generateUniqueScanId(); // Generate new scan ID for next scan
+      fetchUniqueScanId(); // Generate new scan ID for next scan
     } catch (err) {
+      console.error('Error uploading and assigning scan', err);
       setError('Error uploading and assigning scan.');
     } finally {
       setLoading(false);

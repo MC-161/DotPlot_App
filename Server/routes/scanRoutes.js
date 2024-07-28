@@ -10,7 +10,8 @@ import {
   assignScanToPatient,
   getScanCount,
   getLimitedScans,
-  checkScanId
+  checkScanId,
+  generateUniqueScanId
 } from '../controllers/scanController.js';
 import { verifyToken } from '../middleware/auth.js';
 
@@ -18,6 +19,7 @@ const router = express.Router();
 
 
 // Protected Routes
+router.get('/generateUniqueScanId', verifyToken, generateUniqueScanId); // Generate unique scan ID
 router.get('/limited', verifyToken, getLimitedScans);
 router.get('/checkScanId/:id', verifyToken, checkScanId);
 router.get('/count', verifyToken, getScanCount);
