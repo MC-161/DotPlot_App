@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Person, ContactMail, Settings, ExitToApp } from "@mui/icons-material";
+import { Home, Person, ContactMail,ExitToApp } from "@mui/icons-material";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // useLocation for getting current path
 import sonoLogo from "@/assets/sonoLogo.jpg"
 import { useAuth } from "@/components/AuthContext"; // Import useAuth for logout
