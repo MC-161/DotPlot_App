@@ -85,9 +85,6 @@ const Login: React.FC = () => {
           >
             Sign in
           </button>
-          <p className="mt-4 text-center">
-            Don't have an account? <a href="#" className="text-[#20259E]">Sign up</a>
-          </p>
         </form>
       </div>
     </div>
