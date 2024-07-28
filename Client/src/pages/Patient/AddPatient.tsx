@@ -7,16 +7,16 @@ import { toast } from 'react-toastify';
 
 const AddPatient: React.FC = () => {
   const [name, setName] = useState<string>('');
-  const [age, setAge] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
-  const [weight, setWeight] = useState<number>(0);
+  const [age, setAge] = useState<number | string>('');
+  const [height, setHeight] = useState<number | string>('');
+  const [weight, setWeight] = useState<number | string>('');
   const [history, setHistory] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
   const generateUniqueId = () => {
-    return `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+    return `${Math.floor(Math.random() * 10000)}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,9 +28,9 @@ const AddPatient: React.FC = () => {
       const response = await axios.post(`${BaseUrl}/patients`, {
         _id: generateUniqueId(), // Generate a unique ID
         name,
-        age,
-        height,
-        weight,
+        age: parseInt(age as string, 10),
+        height: parseInt(height as string, 10),
+        weight: parseInt(weight as string, 10),
         history,
       }, {
         headers: {
@@ -41,7 +41,7 @@ const AddPatient: React.FC = () => {
 
       console.log('Response:', response);
       toast.success('Patient added successfully!');
-      navigate('/patients');
+      navigate('/patientSearch');
     } catch (err) {
       console.error('Error adding patient:', err);
       toast.error('Error adding patient.');
@@ -69,7 +69,7 @@ const AddPatient: React.FC = () => {
           <input
             type="number"
             value={age}
-            onChange={(e) => setAge(parseInt(e.target.value, 10))}
+            onChange={(e) => setAge(e.target.value)}
             className="p-2 border rounded-md border-gray-300 w-full"
             required
           />
@@ -79,7 +79,7 @@ const AddPatient: React.FC = () => {
           <input
             type="number"
             value={height}
-            onChange={(e) => setHeight(parseInt(e.target.value, 10))}
+            onChange={(e) => setHeight(e.target.value)}
             className="p-2 border rounded-md border-gray-300 w-full"
             required
           />
@@ -89,7 +89,7 @@ const AddPatient: React.FC = () => {
           <input
             type="number"
             value={weight}
-            onChange={(e) => setWeight(parseInt(e.target.value, 10))}
+            onChange={(e) => setWeight(e.target.value)}
             className="p-2 border rounded-md border-gray-300 w-full"
             required
           />

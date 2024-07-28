@@ -101,7 +101,7 @@ const PatientTable: React.FC = () => {
   if (error) return <div className="p-4 text-center text-red-500">{error}</div>;
 
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg">
+    <div className="p-4 bg-white shadow-md rounded-lg overflow-hidden">
       <div className="flex items-center mb-4">
         <input
           type="text"

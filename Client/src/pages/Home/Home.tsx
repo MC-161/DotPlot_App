@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-full">
       <nav className="w-full flex items-end justify-between p-4 text-white">
         <div className="ml-auto flex items-center space-x-4">
           <Avatar className="border-2 border-purple-800" sx={{ width: 36, height: 36 }} src={doctorImg} />

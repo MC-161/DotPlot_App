@@ -28,7 +28,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="w-64 h-full bg-[#20259E] text-white flex flex-col">
+    <div className="w-64 h-full bg-[#20259E] text-white flex flex-col overflow-hidden">
       <div className="pt-10 text-center flex items-center gap-4 justify-center mr-4">
         <img className="w-6" src={logo} alt="Logo" />
         <p className="text-md font-bold">noName</p>

@@ -24,38 +24,45 @@ const PatientDash: React.FC = () => {
         const response = await axios.get<Patient>(`${BaseUrl}/patients/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+            'Content-Type': 'application/json',
+          },
         });
         setPatient(response.data);
       } catch (err) {
         setError('Error fetching patient data');
-      }
-    };
-
-    const fetchScans = async () => {
-      try {
-        const response = await axios.get<Scan[]>(`${BaseUrl}/scans`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          },
-          params: { patientId: id }
-        });
-        const sortedScans = response.data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-        setScans(sortedScans);
-      } catch (err) {
-        setError('Error fetching scans');
+        setLoading(false);
       }
     };
 
     if (id) {
       fetchPatient();
-      fetchScans();
     }
-
-    setLoading(false);
   }, [id]);
+
+  useEffect(() => {
+    const fetchScans = async () => {
+      if (patient) {
+        try {
+          const response = await axios.get<Scan[]>(`${BaseUrl}/scans`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              'Content-Type': 'application/json',
+            },
+          });
+          const patientScanIds = new Set(patient.scans);
+          const filteredScans = response.data.filter((scan) => patientScanIds.has(scan._id));
+          const sortedScans = filteredScans.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+          setScans(sortedScans);
+        } catch (err) {
+          setError('Error fetching scans');
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchScans();
+  }, [patient]);
 
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
@@ -89,10 +96,10 @@ const PatientDash: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 h-full">
       <div className="bg-white border-2 border-neutral-300 shadow-md rounded-lg p-6 mb-4">
-        <h1 className="text-2xl font-bold mb-4">Patient Information</h1>
-        <div className="mb-4">
+        <h1 className="text-2xl font-bold mb-2">Patient Information</h1>
+        <div className="">
           <p><strong>Name:</strong> {patient.name}</p>
           <p><strong>Age:</strong> {patient.age}</p>
           <p><strong>Height:</strong> {patient.height} cm</p>
@@ -114,15 +121,16 @@ const PatientDash: React.FC = () => {
           {/* Scan Details */}
           <div className="lg:w-2/3 h-72 overflow-y-scroll">
             <div className="grid grid-cols-3 gap-2">
-              {scans.map(scan => (
+              {scans.map((scan) => (
                 <div
                   key={scan._id}
-                  className="bg-white shadow-md rounded-lg p-4 border mb-4 cursor-pointer"
+                  className="bg-white shadow-md rounded-lg p-4 border mb-4 cursor-pointer transition-transform transform hover:scale-105 hover:shadow-purple-500 hover:shadow-lg"
                   onClick={() => handleClick(scan.imagePath)}
                 >
                   <p><strong>Date:</strong> {new Date(scan.date).toLocaleDateString()}</p>
                   <p><strong>Diagnosis:</strong> {scan.diagnosis}</p>
                   <p><strong>Coordinates:</strong> {scan.coordinates}</p>
+                  <p className="text-purple-700">Click to view image</p>
                 </div>
               ))}
             </div>

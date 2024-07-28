@@ -15,7 +15,7 @@ const PatientSearch = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-[600px] flex flex-col">
       <nav className="w-full flex items-center justify-between p-4 text-white">
         {/* Breadcrumbs Section */}
         <div className="flex-grow">
@@ -37,8 +37,8 @@ const PatientSearch = () => {
           </button>
         </div>
       </nav>
-      <div className="p-4 flex-grow">
-        <div className='text-xl font-semibold mb-4'>Patient Search</div>
+      <div className="">
+        <div className='w-full flex justify-center text-xl font-semibold'>Patient Search</div>
         <PatientTable />
       </div>
     </div>
