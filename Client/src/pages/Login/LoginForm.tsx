@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/components/AuthContext';
+import { AssessmentOutlined, AccessTimeFilledOutlined, SecurityOutlined } from '@mui/icons-material';
+import logo from "@/assets/sonoLogo.jpg"
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -31,20 +33,21 @@ const Login: React.FC = () => {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      <div className="flex-1 flex items-center justify-center bg-gradient-to-r from-[#20259E] to-[#4B50C1] p-10">
-        <div className="text-white">
+      <div className=" relative flex-1 flex items-center justify-center bg-gradient-to-t from-[#20259E] via-[#321977] to-[#321977] p-10">
+        <div className="text-white flex flex-col">
+          <img className='w-72 absolute top-14 self-center rounded-md' src={logo} alt="" />
           <h2 className="text-4xl font-bold mb-4">Manage and Visualize Patient Data</h2>
           <ul className="space-y-2">
             <li className="flex items-center space-x-2">
-              <span className="material-icons">assessment</span>
+              <span className="material-icons"><AssessmentOutlined/></span>
               <span>Advanced data visualization</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="material-icons">access_time</span>
+              <span className="material-icons"><AccessTimeFilledOutlined/></span>
               <span>Access data 24/7</span>
             </li>
             <li className="flex items-center space-x-2">
-              <span className="material-icons">security</span>
+              <span className="material-icons"><SecurityOutlined/></span>
               <span>Secure and private</span>
             </li>
           </ul>

@@ -29,7 +29,7 @@ const SideNav: React.FC = () => {
   return (
     <div className="w-64 h-full bg-[#321977] text-white flex flex-col overflow-hidden">
       <div className="pt-10 text-center flex items-center gap-4 justify-center mr-4">
-        <img className="w-full ml-5" src={sonoLogo} alt="Logo" />
+        <img className="w-full ml-4 rounded-md" src={sonoLogo} alt="Logo" />
         {/* <p className="text-md font-bold">noName</p> */}
       </div>
       <nav className="mt-10 flex-grow">
