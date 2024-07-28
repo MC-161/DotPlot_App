@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 // Define the shape of the context
 
+// Define the shape of the context
 interface AuthContextType {
   token: string | null;
+  isAuthenticated: boolean;
   login: (token: string) => void;
   logout: () => void;
 }
@@ -35,18 +37,20 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = (token: string,) => {
     localStorage.setItem('token', token);
     setToken(token);
-    navigate('/'); // Redirect to home page on successful login
+    navigate('/dash'); // Redirect to home page on successful login
   };
 
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setToken(null);
-    navigate('/login'); // Redirect to login page on logout
+    navigate('/'); // Redirect to login page on logout
   };
+  
+  const isAuthenticated = !!token;
 
   return (
-    <AuthContext.Provider value={{token, login, logout }}>
+    <AuthContext.Provider value={{token, isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Home, Person, ContactMail, Settings, ExitToApp } from "@mui/icons-material";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // useLocation for getting current path
-import logo from "@/assets/logo.svg";
+import sonoLogo from "@/assets/sonoLogo.jpg"
 import { useAuth } from "@/components/AuthContext"; // Import useAuth for logout
 
 type NavItem = {
@@ -11,10 +11,9 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { name: "Overview", path: "/", icon: <Home /> },
+  { name: "Overview", path: "/dash", icon: <Home /> },
   { name: "Patients", path: "/patientSearch", icon: <Person /> },
   { name: "Scans", path: "/scans", icon: <ContactMail /> },
-  { name: "Settings", path: "/settings", icon: <Settings /> },
 ];
 
 const SideNav: React.FC = () => {
@@ -24,14 +23,14 @@ const SideNav: React.FC = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login'); // Redirect to login page after logout
+    navigate('/'); // Redirect to login page after logout
   };
 
   return (
-    <div className="w-64 h-full bg-[#20259E] text-white flex flex-col overflow-hidden">
+    <div className="w-64 h-full bg-[#321977] text-white flex flex-col overflow-hidden">
       <div className="pt-10 text-center flex items-center gap-4 justify-center mr-4">
-        <img className="w-6" src={logo} alt="Logo" />
-        <p className="text-md font-bold">noName</p>
+        <img className="w-full ml-5" src={sonoLogo} alt="Logo" />
+        {/* <p className="text-md font-bold">noName</p> */}
       </div>
       <nav className="mt-10 flex-grow">
         <ul className="space-y-2">
