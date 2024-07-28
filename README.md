@@ -1,5 +1,7 @@
-# Sonomon
 
+![sonoLogo](https://github.com/user-attachments/assets/27aa7a1c-4e35-4a82-9e1e-8f63ff80f3df )
+
+# Sonomon
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
