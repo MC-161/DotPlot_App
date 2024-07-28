@@ -1,7 +1,6 @@
 // hooks/usePatients.ts
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useAuthToken } from './useAuthToken';
 import { BaseUrl } from '@/config';
 
 
